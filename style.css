@@ -20,29 +20,10 @@ html {
   display: flex;
 }
 
-/* .pending-todo-list {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  gap: 10px;
-} */
-
 .pending-todo-list li {
   display: flex;
   justify-content: space-between;
 }
-
-/* .pending-todo-list li input {
-  flex-grow: 1;
-  text-align: center;
-} */
-
-/* .list-container {
-  display: flex;
-  justify-content: space-around;
-} */
 
 li input:not(:read-only) {
   background-color: white;
