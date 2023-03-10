@@ -91,9 +91,8 @@ const View = (() => {
         let pendingTodosTemplate = "";
         let compeletedTodosTemplate = "";
         todos.forEach((todo) => {
-            const liTemplate = `<li><input value="${todo.content}" class="task-input" id="${todo.id}"/><button class="delete-btn" id="${todo.id}">delete</button></li>
-            <button class="edit-btn" id="${todo.id}">edit</button>
-            <button class="switch-btn" id="${todo.id}">switch</button>`;
+            const liTemplate = `<li><input value="${todo.content}" class="task-input" id="${todo.id}"/><button class="delete-btn" id="${todo.id}">delete</button><button class="edit-btn" id="${todo.id}">edit</button>
+            <button class="switch-btn" id="${todo.id}">switch</button></li>`;
             if (todo.isCompleted) {
                 compeletedTodosTemplate += liTemplate
             } else {

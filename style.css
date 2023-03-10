@@ -32,11 +32,25 @@ html {
   margin: 20px;
 }
 
-.pending-todo-list li {
+.pending-todo-list li,
+.completed-todo-list li {
   display: flex;
   flex-direction: row;
+  text-align: center;
 }
 
-li input:not(:read-only) {
+/* li input:not(:read-only) {
   background-color: white;
+} */
+
+li input {
+  background-color: beige;
+  border: none;
+  padding: 10px 0px;
+  margin: 10px;
+  text-align: center;
+}
+
+button {
+  margin: 9px;
 }
