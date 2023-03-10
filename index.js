@@ -197,6 +197,28 @@ const Controller = ((view, model) => {
                     // edit works and updates state with new array
                 });
             }
+
+            if (event.target.className === "switch-btn") {
+                const id = event.target.id;
+                let todoInput = null;
+                Array.from(document.getElementsByClassName('task-input')).forEach(todo => {
+                    if (todo.id === id) {
+                        todoInput = todo
+                    }
+                })
+
+                model.editTodo(+id, { content: todoInput.value }, true).then((data) => {
+                    let newState = state.todos.map(todo => {
+                        if (todo.id === data.id) {
+                            return data
+                        } else {
+                            return todo
+                        }
+                    })
+                    state.todos = newState
+                    // edit works and updates state with new array
+                });
+            }
         });
 
         view.compeletedTodoList.addEventListener("click", (event) => {
@@ -210,6 +232,28 @@ const Controller = ((view, model) => {
                 })
 
                 model.editTodo(+id, { content: todoInput.value }, true).then((data) => {
+                    let newState = state.todos.map(todo => {
+                        if (todo.id === data.id) {
+                            return data
+                        } else {
+                            return todo
+                        }
+                    })
+                    state.todos = newState
+                    // edit works and updates state with new array
+                });
+            }
+
+            if (event.target.className === "switch-btn") {
+                const id = event.target.id;
+                let todoInput = null;
+                Array.from(document.getElementsByClassName('task-input')).forEach(todo => {
+                    if (todo.id === id) {
+                        todoInput = todo
+                    }
+                })
+
+                model.editTodo(+id, { content: todoInput.value }, false).then((data) => {
                     let newState = state.todos.map(todo => {
                         if (todo.id === data.id) {
                             return data
