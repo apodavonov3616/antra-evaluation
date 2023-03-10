@@ -1,14 +1,15 @@
 .app {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  border-radius: 5px;
-  width: fit-content;
-  padding: 10px;
+  justify-content: center;
   text-align: center;
-  gap: 10px;
-  align-items: stretch;
+  width: 900px;
+}
 
+.form {
+  background-color: rgb(245, 241, 241);
+  border-radius: 5px;
+  padding: 10px;
 }
 
 html {
@@ -18,11 +19,22 @@ html {
 
 .list-container {
   display: flex;
+  justify-content: space-around;
+
+
+}
+
+.pending-todo-list-container,
+.completed-todo-list-container {
+  width: 400px;
+  background-color: rgb(238, 234, 234);
+  padding: 20px;
+  margin: 20px;
 }
 
 .pending-todo-list li {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
 }
 
 li input:not(:read-only) {
